@@ -1,5 +1,9 @@
 (use-package magit
-  :bind (("C-c g" . magit-status)))
+  :bind (
+    ("M-g s" . magit-status)
+    ("M-g d" . magit-diff)
+    ("M-g c" . magit-commit)
+))
 
 (use-package git-gutter
   :config

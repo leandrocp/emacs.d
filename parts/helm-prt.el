@@ -21,10 +21,18 @@
           helm-move-to-line-cycle-in-source     t
           helm-ff-search-library-in-sexp        t
           helm-ff-file-name-history-use-recentf t
-          helm-ag-fuzzy-match                   t))
-  :bind
-    (("M-x" . helm-M-x)
-     ("C-c s" . helm-do-ag-project-root)))
+          helm-ag-fuzzy-match                   t)
+    (define-key helm-find-files-map (kbd "M-j") 'helm-next-line)
+    (define-key helm-find-files-map (kbd "M-k") 'helm-previous-line)
+    (define-key helm-map (kbd "M-j") 'helm-next-line)
+    (define-key helm-map (kbd "M-k") 'helm-previous-line)
+    (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+    (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
+  )
+  :bind (
+    ("M-x" . helm-M-x)
+    ("M-p o" . helm-occur)
+  ))
 (ido-mode -1) ;; Turn off ido mode in case I enabled it accidentally
 
 (use-package helm-descbinds

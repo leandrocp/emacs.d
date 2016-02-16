@@ -7,8 +7,8 @@
     (setq company-tooltip-flip-when-above t))
   :config
   (progn
-    (global-company-mode 1))
-  :bind (("M-k" . company-select-previous)
-         ("M-j" . company-select-next)))
+    (global-company-mode 1)
+    (define-key company-active-map (kbd "M-j") 'company-select-next)
+    (define-key company-active-map (kbd "M-k") 'company-select-previous)))
 
 (provide 'completion-prt)

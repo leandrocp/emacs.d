@@ -10,7 +10,6 @@
     (forward-line -1)
     (indent-according-to-mode)))
 
-(use-package elixir-mode)
 (use-package alchemist
   :config
   (progn
