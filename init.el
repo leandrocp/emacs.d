@@ -19,6 +19,10 @@
 (require 'evil-prt)
 (require 'helm-prt)
 (require 'projectile-prt)
+(require 'completion-prt)
+(require 'programming-prt)
+(require 'git-prt)
+(require 'elixir-prt)
 
 (provide 'init)
 
