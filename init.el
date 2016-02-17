@@ -18,6 +18,7 @@
 (require 'theme-prt)
 (require 'evil-prt)
 (require 'helm-prt)
+(require 'tabbar-prt)
 (require 'project-prt)
 (require 'completion-prt)
 (require 'neotree-prt)

@@ -1,5 +1,9 @@
 (use-package diminish)
 
+(use-package powerline
+  :config
+  (powerline-default-theme))
+
 (setq scroll-conservatively 10000)
 (setq scroll-preserve-screen-position t)
 
