@@ -2,9 +2,8 @@
   :init
   (progn
     (key-chord-mode 1)
-    (key-chord-define-global "jj" 'evil-normal-state)
-    (key-chord-define-global "jw" 'switch-window)
-    (key-chord-define-global "jg" 'magit-status)
+    (key-chord-define-global "ww" 'switch-window)
+    (key-chord-define-global "gg" 'magit-status)
 ))
 
 (provide 'keys-prt)
