@@ -1,8 +1,7 @@
 (use-package better-defaults)
 
-;shell settings
-(setq shell-file-name "/bin/zsh")
-(setq explicit-shell-file-name "/bin/zsh")
+(setq shell-file-name "/bin/zsh"
+      explicit-shell-file-name "/bin/zsh")
 
 (setq backup-directory-alist `(("." . "~/.emacs.d/saves")))
 

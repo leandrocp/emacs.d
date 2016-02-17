@@ -1,8 +1,11 @@
 (use-package diminish)
 
-(use-package powerline
+(use-package smart-mode-line
+  :init
+  (setq sml/no-confirm-load-theme t)
+  (setq sml/theme 'dark)
   :config
-  (powerline-default-theme))
+  (sml/setup))
 
 (setq scroll-conservatively 10000)
 (setq scroll-preserve-screen-position t)
@@ -13,7 +16,6 @@
 (column-number-mode 1)
 (global-hl-line-mode t)
 
-; (global-linum-mode t)
 (setq linum-format "%4d \u2502 ")
 (mapc
  (lambda (mode-hook)

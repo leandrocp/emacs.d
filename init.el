@@ -9,15 +9,17 @@
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
-  (setq use-package-always-ensure t)
+(setq use-package-always-ensure t)
 
 (add-to-list 'load-path (expand-file-name "parts" user-emacs-directory))
 
 (require 'base-prt)
+(require 'keys-prt)
 (require 'display-prt)
 (require 'theme-prt)
 (require 'evil-prt)
 (require 'helm-prt)
+(require 'window-prt)
 (require 'tabbar-prt)
 (require 'project-prt)
 (require 'completion-prt)
@@ -25,6 +27,7 @@
 (require 'programming-prt)
 (require 'git-prt)
 (require 'elixir-prt)
+(require 'ember-prt)
 
 (provide 'init)
 

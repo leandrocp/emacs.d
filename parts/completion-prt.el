@@ -1,15 +1,18 @@
 (use-package company
   :init
-  (progn
     (setq company-idle-delay 0)
     (setq company-tooltip-limit 10)
     (setq company-minimum-prefix-length 2)
-    (setq company-tooltip-flip-when-above t))
+    (setq company-tooltip-flip-when-above t)
+    (setq company-show-numbers t)
   :config
-  (progn
     (add-hook 'prog-mode-hook 'company-mode)
-    (global-set-key "\t" 'company-complete-common)
-    (define-key company-active-map (kbd "M-j") 'company-select-next)
-    (define-key company-active-map (kbd "M-k") 'company-select-previous)))
+    (bind-key "C-<tab>" 'company-complete)
+    (bind-keys :map company-active-map
+               ("<tab>" . company-complete-common-or-cycle)
+               ("C-j"   . company-select-next)
+               ("C-k"   . company-select-previous))
+  :bind
+    ("<C-tab>" . company-complete))
 
 (provide 'completion-prt)
