@@ -6,4 +6,6 @@
   :config
     (global-flycheck-mode))
 
+(electric-indent-mode +1)
+
 (provide 'programming-prt)
