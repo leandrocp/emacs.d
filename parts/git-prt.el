@@ -1,14 +1,10 @@
 (use-package magit
-  :bind (
-    ("M-g s" . magit-status)
-    ("M-g d" . magit-diff)
-    ("M-g c" . magit-commit)
-    ("M-g p" . magit-push)
-))
+  :bind (("M-g" . magit-status)))
 
 (use-package git-gutter
+  :diminish gitg
   :config
-  (global-git-gutter-mode t)
-  (git-gutter:linum-setup))
+    (global-git-gutter-mode t)
+    (git-gutter:linum-setup))
 
 (provide 'git-prt)

@@ -16,7 +16,7 @@
 (column-number-mode 1)
 (global-hl-line-mode t)
 
-(setq linum-format "%4d \u2502 ")
+(setq linum-format " %3d ")
 (mapc
  (lambda (mode-hook)
    (add-hook mode-hook 'linum-mode))
@@ -31,7 +31,5 @@
 (setq inhibit-splash-screen t
       inhibit-startup-echo-area-message t
       inhibit-startup-message t)
-
-(defalias 'yes-or-no-p 'y-or-n-p)
 
 (provide 'display-prt)

@@ -14,13 +14,13 @@
 (add-to-list 'load-path (expand-file-name "parts" user-emacs-directory))
 
 (require 'base-prt)
-(require 'keys-prt)
+;(require 'keys-prt)
 (require 'display-prt)
 (require 'theme-prt)
 (require 'evil-prt)
 (require 'helm-prt)
 (require 'window-prt)
-(require 'tabbar-prt)
+;(require 'tabbar-prt)
 (require 'project-prt)
 (require 'completion-prt)
 (require 'neotree-prt)
@@ -30,5 +30,3 @@
 (require 'ember-prt)
 
 (provide 'init)
-
-;;; init.el ends here

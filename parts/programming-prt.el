@@ -2,7 +2,8 @@
   :diminish "")
 
 (use-package flycheck
+  :diminish flyc
   :config
-  (global-flycheck-mode))
+    (global-flycheck-mode))
 
 (provide 'programming-prt)
