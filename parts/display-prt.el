@@ -8,11 +8,23 @@
 (line-number-mode 1)
 (column-number-mode 1)
 (global-hl-line-mode t)
-(setq linum-format " %d  ")
-(global-linum-mode t)
+
+; (global-linum-mode t)
+(setq linum-format "%4d \u2502 ")
+(mapc
+ (lambda (mode-hook)
+   (add-hook mode-hook 'linum-mode))
+ '(text-mode-hook
+   prog-mode-hook
+   conf-mode-hook
+   css-mode-hook))
 
 (set-frame-parameter nil 'fullscreen 'fullboth)
 (setq default-cursor-type 'box)
+
+(setq inhibit-splash-screen t
+      inhibit-startup-echo-area-message t
+      inhibit-startup-message t)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 

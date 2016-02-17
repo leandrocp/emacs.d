@@ -1,5 +1,11 @@
 (use-package better-defaults)
 
+;shell settings
+(setq shell-file-name "/bin/zsh")
+(setq explicit-shell-file-name "/bin/zsh")
+
+(setq backup-directory-alist `(("." . "~/.emacs.d/saves")))
+
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
