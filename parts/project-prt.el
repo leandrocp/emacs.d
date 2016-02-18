@@ -4,7 +4,7 @@
     (setq projectile-completion-system 'helm)
     (setq projectile-indexing-method 'alien)
     (add-to-list 'projectile-globally-ignored-files "node-modules")
-    (projectile-global-mode))
+    (add-hook 'prog-mode-hook 'projectile-mode))
 
 (use-package helm-projectile
   :config
