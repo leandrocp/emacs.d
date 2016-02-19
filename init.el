@@ -14,7 +14,7 @@
 (add-to-list 'load-path (expand-file-name "parts" user-emacs-directory))
 
 (require 'base-prt)
-;(require 'keys-prt)
+(require 'keys-prt)
 (require 'display-prt)
 (require 'theme-prt)
 (require 'evil-prt)

@@ -5,9 +5,10 @@
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
-(setq delete-old-versions t)
-(setq make-backup-files nil)
-(setq create-lockfiles nil)
+;(setq backup-directory-alist
+; `((".*" . ,temporary-file-directory)))
+;setq auto-save-file-name-transforms
+; `((".*" ,temporary-file-directory t)))
 
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
